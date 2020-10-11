@@ -1,6 +1,6 @@
 # Iterable AVL Tree
 
-A typed, iterable AVL Tree implementation
+A typed, iterable AVL Tree implementation. Plays nicely with [Iter](https://github.com/mostlind/iter).
 
 ## Usage
 
