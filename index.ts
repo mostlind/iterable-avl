@@ -143,14 +143,13 @@ function rightRotate<T>(node: AVLNode<T>) {
   return left;
 }
 
-function remove<T>(node: AVLNode<T>, val: T, key: Key<T>) {
+function remove<T, U>(node: AVLNode<T>, val: U, key: Key<T>) {
   const nodeKey: any = node === undefined ? undefined : key(node.val);
-  const valKey = key(val);
   if (typeof node === "undefined") {
     return node;
-  } else if (valKey < nodeKey) {
+  } else if (val < nodeKey) {
     node.left = remove(node.left, val, key);
-  } else if (valKey > nodeKey) {
+  } else if (val > nodeKey) {
     node.right = remove(node.right, val, key);
   } else {
     if (typeof node.left === "undefined") {
@@ -266,7 +265,7 @@ export function AVLTree<T, U>(...args: any[]) {
       tree = insert(tree, val, keyFn);
     },
     get: (val: U) => get(tree, keyFn, val),
-    remove: (val: T) => {
+    remove: (val: U) => {
       tree = remove(tree, val, keyFn);
     },
     reversed: {
