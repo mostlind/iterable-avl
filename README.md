@@ -9,16 +9,17 @@ A typed, iterable AVL Tree implementation
 ```typescript
 type AVLTree<Value, KeyType>
 
-// Using key function
 interface Person {
   id: string,
   name: string
 }
 
+// Using key function
+// Will infer the type of the tree based on the key function
 function identifyPerson({id}: Person): string {
   return id
 }
-// Will infer the type of the tree based on the key function
+
 AVLTree(identifyPerson) // AVLTree<Person, string>
 
 
