@@ -4,6 +4,12 @@ A typed, iterable AVL Tree implementation
 
 ## Usage
 
+### Import
+
+```typescript
+import { AVLTree } from "iterable-avl";
+```
+
 ### Constructor
 
 ```typescript
