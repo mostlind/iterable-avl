@@ -7,7 +7,7 @@ A typed, iterable AVL Tree implementation
 ### Constructor
 
 ```typescript
-type AVLTree<Value, Identifier>
+type AVLTree<Value, KeyType>
 
 // Using key function
 interface Person {
